@@ -1,0 +1,50 @@
+db.firstCollection.update(
+    {
+        name: "Milo"
+    },
+    {
+        $set:
+            {
+                lastName: "Shakers"
+            }
+    }
+)
+
+db.firstCollection.update({
+	name: "Loreli"
+},
+{
+	$set:{
+		salary: 1050
+	}
+})
+
+// same as the above but cleaner look
+
+// db.firstCollection.update(
+//     {name: "Loreli"},
+//     {$set: {salary: 1050}}
+// )
+
+db.firstCollection.update(  
+    {name: "Razu"}, 
+    {$push: {
+        hobbies: "Razu-Ball"
+    }}
+)
+
+db.firstCollection.update(
+	{name: "Soren"},
+	{$set: 
+		{dreams: []}
+	}
+)
+
+db.firstCollection.update(
+	{name: "Soren"},
+	{$push: {
+		dreams: {
+			$each: ["Being like Razu", "Breaking the glass floor"]
+		}
+	}}
+)

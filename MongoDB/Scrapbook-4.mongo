@@ -1,0 +1,18 @@
+db.firstCollection.remove({})
+
+
+
+
+
+// all
+db.firstCollection.remove({
+    "accountDetails.fullName": "Bobby Gkm"
+})
+
+// first
+db.firstCollection.remove(  
+    {
+        "accountDetails.fullName": "Bobby Gkm"
+    }, 
+    true
+)

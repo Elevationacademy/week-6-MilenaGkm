@@ -1,0 +1,57 @@
+db.firstCollection.find({})
+
+db.firstCollection.find({
+    name: "Milo"
+})
+
+db.firstCollection.find({
+    name: "Loreli"
+})
+
+db.firstCollection.find({
+    salary:{
+        $gt: 1200
+    }
+})
+
+db.firstCollection.find(    //query starts here
+    {                       //filter starts here
+        salary: {
+            $gt: 1200
+        }
+    },                      //filter ends here
+    {                       //projection starts here
+        name: 1,
+        _id: 0
+    }                       //projection ends here
+)                           //query ends here
+
+db.firstCollection.find({
+	name: "Razu"
+},
+{
+	"hometown.city": 1
+})
+
+db.firstCollection.find({
+    hobbies: "Philosophy"
+})
+
+// instead of finding we're counting, with the result being a plain number.
+db.firstCollection.count({
+    salary:{
+        $gt: 1200
+    }
+})
+
+// takes a number and reduces the number of results that gets sent back
+db.firstCollection.find({
+    salary:{
+        $gt: 200
+    }
+}).limit(2)
+
+//  sorts your results based on one of the keys
+// This command first sorts, then limits - so this will return the top-three earning people,
+//  (we use -1 in the sort to go from high-to-low, use 1 to go from low-to-high).
+db.firstCollection.find({}).sort({salary: -1}).limit(3)

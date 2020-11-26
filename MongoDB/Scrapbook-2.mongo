@@ -1,0 +1,27 @@
+db.firstCollection.insert({
+	currentBalance: 46290,
+	accountDetails: {
+		fullName: "Bobby Gkm",
+		accountNumber: 1337
+	}
+})
+
+db.firstCollection.insert({ name: "Louise", salary: 1200 })
+db.firstCollection.insert({ name: "Rayna", salary: 2300 })
+db.firstCollection.insert({ name: "Soren", salary: 1500 })
+db.firstCollection.insert({ name: "Loreli", salary: 800 })
+db.firstCollection.insert({ name: "Milo", salary: 950 })
+db.firstCollection.insert({ name: "Brendon", salary: 1100 })
+db.firstCollection.insert({name: "Spore", hobbies: ["Running", "Hip Hop", "Basketball", "Soccer"]})
+db.firstCollection.insert({name: "Daniel", hobbies: ["Hip Hop", "Ballet", "Salsa", "Running"]})
+db.firstCollection.insert({name: "Beckie", hobbies: ["Reading", "Running", "Hip Hop", "Writing", "Debate", "Philosophy"]})
+db.firstCollection.insert({name: "Dugg", hobbies: ["Philosophy", "Psychology"]})
+
+
+
+db.firstCollection.insert({ name: "Louise", dept: "Finance", salary: 1200 })
+db.firstCollection.insert({ name: "Rayna", dept: "R&D", salary: 2300 })
+db.firstCollection.insert({ name: "Soren", dept: "Finance", salary: 1500 })
+db.firstCollection.insert({ name: "Loreli", dept: "Sales", salary: 800 })
+db.firstCollection.insert({ name: "Milo", dept: "Sales", salary: 950 })
+db.firstCollection.insert({ name: "Brendon", dept: "Finance", salary: 1100 })
